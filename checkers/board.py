@@ -16,3 +16,6 @@ class Board:
             for col in range(row % 2, ROWS, 2):
                 pygame.draw.rect(window, RED, (row * SQUARE_SIDE_LENGTH, col * SQUARE_SIDE_LENGTH, SQUARE_SIDE_LENGTH, SQUARE_SIDE_LENGTH))
 
+    def create_board(self):
+        pass
+
