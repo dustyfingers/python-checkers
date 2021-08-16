@@ -10,6 +10,7 @@ class Piece:
         self.col = col
         self.color = color
         self.king = False
+        self.OUTLINE = 5
 
         if self.color == RED:
             self.direction = -1
@@ -29,8 +30,8 @@ class Piece:
 
     def draw(self, window):
         RADIUS = (SQUARE_SIDE_LENGTH // 2) * 0.9
-        pygame.draw.circle(window, GREY, (self.x, self.y, RADIUS + self.OUTLINE))
-        pygame.draw.circle(window, self.color, (self.x, self.y, RADIUS))
+        pygame.draw.circle(window, GREY, (self.x, self.y), RADIUS + self.OUTLINE)
+        pygame.draw.circle(window, self.color, (self.x, self.y), RADIUS)
      
     def __repr__(self):
         return str(self.color)
